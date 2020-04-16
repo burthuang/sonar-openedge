@@ -133,7 +133,7 @@ public class LexerTest {
 
     ProgressLexer lexer3 = new ProgressLexer(session, ByteSource.wrap("USERID USER-ID ".getBytes()), "file.txt");
     assertNextToken(lexer3, ABLNodeType.USERID, "USERID");
-    assertNextToken(lexer3, ABLNodeType.ID, "USER-ID");
+    assertNextToken(lexer3, ABLNodeType.USERID2, "USER-ID");
   }
 
   private static void assertNextToken(ProgressLexer lexer, ABLNodeType type, String text) {

@@ -66,7 +66,7 @@ public class LexerTest {
     // SESSION:FIRST-SERVER-SOCKET:HANDLE.
     assertEquals(src.nextToken().getType(), Proparse.SESSION);
     assertEquals(src.nextToken().getType(), Proparse.OBJCOLON);
-    assertEquals(src.nextToken().getType(), Proparse.ID);
+    assertEquals(src.nextToken().getType(), Proparse.FIRSTSERVERSOCKET);
     assertEquals(src.nextToken().getType(), Proparse.OBJCOLON);
     assertEquals(src.nextToken().getType(), Proparse.HANDLE);
     assertEquals(src.nextToken().getType(), Proparse.PERIOD);
@@ -97,7 +97,7 @@ public class LexerTest {
     assertEquals(src.nextToken().getType(), Proparse.DOUBLECOLON);
     assertEquals(src.nextToken().getType(), Proparse.ID);
     assertEquals(src.nextToken().getType(), Proparse.OBJCOLON);
-    assertEquals(src.nextToken().getType(), Proparse.ID);
+    assertEquals(src.nextToken().getType(), Proparse.SETCALLBACK);
     assertEquals(src.nextToken().getType(), Proparse.LEFTPAREN);
     assertEquals(src.nextToken().getType(), Proparse.RIGHTPAREN);
     assertEquals(src.nextToken().getType(), Proparse.PERIOD);
@@ -287,7 +287,7 @@ public class LexerTest {
     assertEquals(stream.nextToken().getType(), Proparse.ID);
     assertEquals(stream.nextToken().getType(), Proparse.PERIOD);
     assertEquals(stream.nextToken().getType(), Proparse.WS);
-    assertEquals(stream.nextToken().getType(), Proparse.ID);
+    assertEquals(stream.nextToken().getType(), Proparse.NAME);
     assertEquals(stream.nextToken().getType(), Proparse.PERIOD);
     assertEquals(stream.nextToken().getType(), Proparse.WS);
     // Third line: comment after period results in NAMEDOT
